@@ -1,0 +1,14 @@
+PERMITIDO O USO DE LISTA
+
+Crie um programa que:
+
+1. Solicite ao usuário dois números inteiros positivos (início e fim de um intervalo).
+2. Utilize uma função chamada eh_primo(numero) que retorne True se o número for primo e False caso contrário.
+3. Utilize um laço while para percorrer o intervalo informado.
+4. Conte quantos números primos existem no intervalo.
+5. Mostre:
+    - A quantidade de primos encontrados
+    - O maior primo do intervalo
+    - O menor primo do intervalo
+
+**O cálculo do número primo deve ser feito manualmente (sem bibliotecas).**

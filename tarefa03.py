@@ -23,4 +23,4 @@ while x <= fim:
 print(f"\nLista de números primos: {num_primos}")
 print(f"Quantidade de primos encontrados: {len(num_primos)}")
 print(f"Menor primo encontrado: {num_primos[0]}")
-print(f"Maior número encontrado: {num_primos[len(num_primos)-1]}")
+print(f"Maior número encontrado: {num_primos[-1]}")

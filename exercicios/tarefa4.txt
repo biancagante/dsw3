@@ -1,0 +1,24 @@
+Desenvolver um programa em Python que simule uma agenda telefônica simples, utilizando exclusivamente um dicionário para armazenar os contatos. O programa deve permitir cadastrar, buscar, excluir e listar contatos.
+
+Cada contato deverá ser armazenado como um par chave-valor no dicionário, sendo:
+
+- **Chave:** nome do contato
+- **Valor:** número de telefone
+
+**Funcionalidades obrigatórias:**
+
+1. **Cadastrar um contato**
+    - Solicitar ao usuário o nome e o telefone.
+    - Caso o nome já exista, permitir a atualização do telefone.
+2. **Buscar um contato**
+    - Solicitar o nome a ser buscado.
+    - Exibir o telefone se o contato existir.
+    - Caso contrário, informar que o contato não foi encontrado.
+3. **Excluir um contato**
+    - Solicitar o nome do contato a ser excluído.
+    - Remover o contato do dicionário, se existir.
+    - Caso não exista, exibir mensagem apropriada.
+4. **Listar todos os contatos**
+    - Exibir o nome e o telefone de cada contato cadastrado.
+5. **Sair**
+    - Encerrar o programa.
