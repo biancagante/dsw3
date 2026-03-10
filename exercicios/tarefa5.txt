@@ -1,0 +1,76 @@
+Trabalho 05 - POO
+SISTEMA DE GERENCIAMENTO DE BIBLIOTECA ORIENTADO A OBJETOS
+Desenvolver um sistema simples de biblioteca utilizando Programação Orientada a Objetos em Python
+ 
+O sistema deve permitir:
+Cadastro de livros
+Cadastro de usuários
+Realização de empréstimos
+Devolução de livros
+Listagem de livros disponíveis
+Listagem de livros emprestados
+ 
+Classe Livro, que deve conter:
+Atributos:
+título  
+autor
+ano
+disponível (booleano)
+Métodos:
+emprestar()
+devolver()
+str()
+A lógica deve impedir que um livro já emprestado seja emprestado novamente.
+ 
+ 
+Classe Usuario, que deve conter:
+Atributos:
+nome
+matricula
+lista de livros emprestados
+Métodos:
+pegar_emprestado(livro)
+devolver_livro(livro)
+str()
+ 
+Classe Biblioteca, que deve conter:
+Atributos:
+lista de livros
+lista de usuários
+Métodos:
+adicionar_livro()
+cadastrar_usuario()
+listar_livros_disponiveis()
+listar_livros_emprestados()
+ 
+Implementação de Herança
+Implemente uma subclasse de Livro, por exemplo: LivroDigital
+Deve herdar de Livro e adicionar:
+atributo tamanho_arquivo (em MB)
+Sobrescreva o método __str__().
+ 
+Organização do Projeto
+ 
+biblioteca/
+
+│
+
+├── livro.py
+
+├── usuario.py
+
+├── biblioteca.py
+
+└── main.py
+ 
+Cada classe deve estar em seu próprio módulo.
+ 
+ 
+Interface
+O sistema pode funcionar via terminal, permitindo:
+Cadastrar livro
+Cadastrar usuário
+Realizar empréstimo
+Devolver livro
+Listar livros disponíveis
+Sair
