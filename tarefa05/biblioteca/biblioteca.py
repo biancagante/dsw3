@@ -19,9 +19,11 @@ class Biblioteca:
 
     def listar_livros_disponiveis(self):
         print("\n\033[94m- Livros disponíveis:\033[0m")
+
         for l in self.lista_livros:
             if l.disponivel == True:
                 print(f"Livro: {l.titulo} | Disponível: {"Sim" if l.disponivel else "Não"}")
+
 
     def listar_livros_emprestados(self):
         print("\n\033[93m- Livros emprestados:\033[0m")
