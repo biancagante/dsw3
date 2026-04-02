@@ -30,7 +30,14 @@ class Biblioteca:
         for l in self.lista_livros:
             if l.disponivel == False:
                 print(f"Livro: {l.titulo} | Disponível: {"Sim" if l.disponivel else "Não"}")
-        
+
+    def listar_livros(self):
+        print("\n\033[93m- Todos os livros:\033[0m")
+        for l in self.lista_livros:
+            if hasattr(l, "tamanho_arquivo"):
+                print(f"Livro: {l.titulo} | Autor: {l.autor} | Ano: {l.ano} |  Disponível: {"Sim" if l.disponivel else "Não"} | Tamanho do arquivo: {l.tamanho_arquivo}")
+            else: 
+                print(f"Livro: {l.titulo} | Autor: {l.autor} | Ano: {l.ano} |  Disponível: {"Sim" if l.disponivel else "Não"}")
 
     # def __str__(self):
     #     print(f"\nLista de livros: {self.lista_livros} \nLista de usuários: {self.lista_usuarios}")

@@ -4,21 +4,20 @@ num_primos = []
 if fim < inicio:
     inicio, fim = fim, inicio
 
-print(f"inicio:{inicio} e fim:{fim}")
-
 def eh_primo(numero):
     if numero < 2:
         return False
-    for i in num_primos:
-        if numero % i == 0:
-            return False
+    
+    elif numero % 2 == 0 or numero % 3 == 0 or numero % 5 == 0 or numero % 7 == 0 or numero % 11 == 0:
+        return False
+        
     return True
 
-x = inicio
-while x <= fim:
-    if eh_primo(x):
-        num_primos.append(x)
-    x = x + 1
+inicio
+while inicio <= fim:
+    if eh_primo(inicio):
+        num_primos.append(inicio)
+    inicio = inicio + 1
 
 print(f"\nLista de números primos: {num_primos}")
 print(f"Quantidade de primos encontrados: {len(num_primos)}")

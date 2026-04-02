@@ -4,18 +4,22 @@ peso = 0
 lista = []
 
 while peso < 23:
-    nomeItem = input("Nome do item: ")
+    nomeItem = input("\nNome do item: ")
     pesoItem = int(input("Peso do item: ")) 
 
-    if "fim" in nomeItem or pesoItem == 0:
-        break;
-    else:
-        lista += [nomeItem]
-        peso = peso + pesoItem
+    peso = peso + pesoItem
 
-print("Mochileiro(a):", nome)
+    if peso >= 23:
+        print("\033[91m\nLimite excedido!\033[0m")
+        peso = peso - pesoItem
+        break
+    elif "fim" in nomeItem or pesoItem == 0:
+        break
+    else: 
+        lista += [nomeItem]
+
+print("\nMochileiro(a):", nome)
 print("Peso Total da Mochila:", peso, "kg")
-print("Espaço Livre:", 23 - peso, "kg")
-print("Lista de itens: ")
+print("Espaço restante: ", 23 - peso, "kg")
 for item in lista:
     print(" ", item)
