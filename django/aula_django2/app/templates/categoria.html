@@ -12,13 +12,15 @@
     <br><br>
 
     {% for cat in categorias %}
-        <p> 
+    <div class="linha-categoria">
+        <span> 
             ID:{{cat.id}} - nome: {{cat.nome}}
-            <div class="actBtn">
-                <a href="{% url 'editcategoria' cat.id %}" class="edit">Editar</a>
-                <a href="{% url 'delcategoria' cat.id %}" class="delete">Excluir</a>
-            </div>
-        </p>
+        </span>
+        <div class="actBtn">
+            <a href="{% url 'editcategoria' cat.id %}" class="edit">Editar</a>
+            <a href="{% url 'delcategoria' cat.id %}" class="delete">Excluir</a>
+        </div>
+    </div>
     {% endfor%}
   
 {% endblock %}

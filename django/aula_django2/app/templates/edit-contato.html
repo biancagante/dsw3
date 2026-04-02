@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block conteudo %}
+<section class="secao-contato">
     <h1>Editar Contato</h1>
-    <form method="post">
+    <form method="post" class="form-contato">
         {% csrf_token %}
         {{form}}
         <input type="submit" value="Atualizar">
     </form>
+</section>
 {% endblock %}
