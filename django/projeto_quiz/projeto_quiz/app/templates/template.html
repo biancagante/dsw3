@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body data-theme="dark" class="dark:bg-zinc-900 text-white">
+    <header class="flex justify-center">
+        <img width="200px" src="https://cdna.artstation.com/p/assets/images/images/061/938/632/original/derend-marvel-ezgif-com-gif-maker-1.gif?1681968838" alt="GIF que mostra um bloco da franquia de jogos Mario Bros amarelo com um ponto de interrogação branco em todas as faces rotacionando">
+    </header>
+    <main class="flex justify-center">
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+    <footer></footer>
+</body>
+</html>

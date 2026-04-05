@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Home
+{% endblock %}
+
+{% block conteudo %}
+    <section class="w-max flex flex-col bg-zinc-800 overflow-hidden rounded-xl p-6 gap-y-2">
+        <p class="flex justify-center text-sm text-zinc-500">Desenvolvimento Web III - Simulado P1</p>
+        <h2 class="text-xl font-semibold">Agora, que tal testar um pouco dos seus conhecimentos em Python?</h2>
+        <button href="/iniciar-quiz" class="mx-auto m-3 p-2 rounded-md w-max bg-sky-600 font-semibold hover:bg-sky-700 cursor-pointer">Começar Quiz</button>
+    </section>
+{% endblock %}
