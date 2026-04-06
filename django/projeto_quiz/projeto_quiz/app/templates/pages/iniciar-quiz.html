@@ -6,6 +6,12 @@
 
 {% block conteudo %}
     <section class="w-max flex flex-col bg-zinc-800 overflow-hidden rounded-xl p-6 gap-y-2">
-        
+        <form action="" method="post" class="flex items-center gap-3">
+            {% csrf_token %}
+            {{ form }}
+            <a href="{% url 'perguntar' %}">
+                <button type="submit" class="p-2 rounded-md w-max bg-sky-600 font-semibold hover:bg-sky-700 cursor-pointer">Ir para perguntas</button>
+            </a>
+        </form>
     </section>
 {% endblock %}

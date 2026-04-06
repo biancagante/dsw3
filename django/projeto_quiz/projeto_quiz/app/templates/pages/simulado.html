@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+Quiz
+{% endblock %}
+
+{% block conteudo %}
+    <section class="bg-zinc-800 p-6 m-4 rounded-xl outline outline-white/15 shadow-xl">
+        {% for p in perguntas %}
+        <div class="m-4">
+            <p class="mb-3">{{ p.enunciado }}</p>
+            {% for a in alternativas %}
+                {% if a.pergunta_id == p.id %}
+                    <div class="p-2 bg-zinc-700 rounded-lg m-2 hover:bg-zinc-600 opcaoQuiz">
+                        <input type="radio" name="pergunta_{{a.pergunta_id}}" id="alternativas" value="{{a.id}}" class="peer">
+                        <label for="alternativas">{{ a.alternativa }}</label>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+            {% endfor %}
+        <button>Finalizar quiz</button>
+    </section>
+{% endblock %}

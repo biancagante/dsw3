@@ -1,0 +1,1159 @@
+[
+  {
+    "model": "app.simulado",
+    "pk": 1,
+    "fields": {
+      "titulo": "Simulado Python Básico"
+    }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 1,
+    "fields": {
+      "enunciado": "1. Qual comando exibe algo na tela?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 1,
+    "fields": { "alternativa": "A) input()", "pergunta": 1 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 2,
+    "fields": { "alternativa": "B) print()", "pergunta": 1 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 3,
+    "fields": { "alternativa": "C) echo()", "pergunta": 1 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 1,
+    "fields": { "pergunta": 1, "alternativa": 2 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 2,
+    "fields": {
+      "enunciado": "2. Qual função lê dados do usuário?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 4,
+    "fields": { "alternativa": "A) read()", "pergunta": 2 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 5,
+    "fields": { "alternativa": "B) input()", "pergunta": 2 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 6,
+    "fields": { "alternativa": "C) scan()", "pergunta": 2 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 7,
+    "fields": { "alternativa": "D) get()", "pergunta": 2 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 2,
+    "fields": { "pergunta": 2, "alternativa": 5 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 3,
+    "fields": {
+      "enunciado": "3. O que o código abaixo faz?\nnome = input(\"Digite seu nome: \")\nprint(nome)",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 8,
+    "fields": { "alternativa": "A) Ignora o usuário", "pergunta": 3 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 9,
+    "fields": { "alternativa": "B) Mostra sempre \"nome\"", "pergunta": 3 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 10,
+    "fields": { "alternativa": "C) Lê e exibe o que o usuário digitou", "pergunta": 3 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 11,
+    "fields": { "alternativa": "D) Dá erro", "pergunta": 3 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 3,
+    "fields": { "pergunta": 3, "alternativa": 10 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 4,
+    "fields": {
+      "enunciado": "4. Qual será o tipo da variável?\nx = \"10\"",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 12,
+    "fields": { "alternativa": "A) int", "pergunta": 4 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 13,
+    "fields": { "alternativa": "B) float", "pergunta": 4 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 14,
+    "fields": { "alternativa": "C) str", "pergunta": 4 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 15,
+    "fields": { "alternativa": "D) bool", "pergunta": 4 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 4,
+    "fields": { "pergunta": 4, "alternativa": 14 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 5,
+    "fields": {
+      "enunciado": "5. Qual será o resultado?\nx = int(\"5\")\nprint(x + 2)",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 16,
+    "fields": { "alternativa": "A) 52", "pergunta": 5 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 17,
+    "fields": { "alternativa": "B) 7", "pergunta": 5 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 18,
+    "fields": { "alternativa": "C) erro", "pergunta": 5 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 19,
+    "fields": { "alternativa": "D) \"7\"", "pergunta": 5 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 5,
+    "fields": { "pergunta": 5, "alternativa": 17 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 6,
+    "fields": {
+      "enunciado": "6. O que esse código imprime?\nx = \"5\"\nif x == 5:\n    print(\"A\")\nelse:\n    print(\"B\")",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 20,
+    "fields": { "alternativa": "A) A", "pergunta": 6 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 21,
+    "fields": { "alternativa": "B) B", "pergunta": 6 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 22,
+    "fields": { "alternativa": "C) 3", "pergunta": 6 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 23,
+    "fields": { "alternativa": "D) Erro", "pergunta": 6 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 6,
+    "fields": { "pergunta": 6, "alternativa": 21 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 7,
+    "fields": {
+      "enunciado": "7. Complete corretamente:\nif x ___ 10:\n    print(\"Diferente\")",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 24,
+    "fields": { "alternativa": "A) =", "pergunta": 7 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 25,
+    "fields": { "alternativa": "B) ==", "pergunta": 7 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 26,
+    "fields": { "alternativa": "C) :=", "pergunta": 7 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 27,
+    "fields": { "alternativa": "D) !=", "pergunta": 7 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 7,
+    "fields": { "pergunta": 7, "alternativa": 27 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 8,
+    "fields": {
+      "enunciado": "8. Qual será a saída?\nfor i in range(3):\n    print(i)",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 28,
+    "fields": { "alternativa": "A) 1 2 3", "pergunta": 8 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 29,
+    "fields": { "alternativa": "B) 0 1 2", "pergunta": 8 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 30,
+    "fields": { "alternativa": "C) 0 1 2 3", "pergunta": 8 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 31,
+    "fields": { "alternativa": "D) Erro", "pergunta": 8 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 8,
+    "fields": { "pergunta": 8, "alternativa": 29 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 9,
+    "fields": {
+      "enunciado": "9. O que esse código faz?\ni = 0\nwhile i < 3:\n    print(i)\n    i += 1",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 32,
+    "fields": { "alternativa": "A) Imprime 1,2,3", "pergunta": 9 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 33,
+    "fields": { "alternativa": "B) Loop infinito", "pergunta": 9 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 34,
+    "fields": { "alternativa": "C) Imprime 0,1,2", "pergunta": 9 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 35,
+    "fields": { "alternativa": "D) Erro", "pergunta": 9 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 9,
+    "fields": { "pergunta": 9, "alternativa": 34 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 10,
+    "fields": {
+      "enunciado": "10. Palavra-chave para criar função:",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 36,
+    "fields": { "alternativa": "A) func", "pergunta": 10 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 37,
+    "fields": { "alternativa": "B) def", "pergunta": 10 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 38,
+    "fields": { "alternativa": "C) function", "pergunta": 10 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 39,
+    "fields": { "alternativa": "D) lambda", "pergunta": 10 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 10,
+    "fields": { "pergunta": 10, "alternativa": 37 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 11,
+    "fields": {
+      "enunciado": "11. O que será exibido?\ndef add(a, b):\n    return a + b\nprint(add(2, 3))",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 40,
+    "fields": { "alternativa": "A) 23", "pergunta": 11 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 41,
+    "fields": { "alternativa": "B) 5", "pergunta": 11 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 42,
+    "fields": { "alternativa": "C) erro", "pergunta": 11 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 43,
+    "fields": { "alternativa": "D) None", "pergunta": 11 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 11,
+    "fields": { "pergunta": 11, "alternativa": 41 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 12,
+    "fields": {
+      "enunciado": "12. Para que servem funções?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 44,
+    "fields": { "alternativa": "A) Repetir código", "pergunta": 12 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 45,
+    "fields": { "alternativa": "B) Organizar e reutilizar código", "pergunta": 12 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 46,
+    "fields": { "alternativa": "C) Criar listas", "pergunta": 12 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 47,
+    "fields": { "alternativa": "D) Encerrar programa", "pergunta": 12 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 12,
+    "fields": { "pergunta": 12, "alternativa": 45 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 13,
+    "fields": {
+      "enunciado": "13. O que é um parâmetro?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 48,
+    "fields": { "alternativa": "A) Retorno", "pergunta": 13 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 49,
+    "fields": { "alternativa": "B) Valor passado para função", "pergunta": 13 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 50,
+    "fields": { "alternativa": "C) Variável global", "pergunta": 13 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 51,
+    "fields": { "alternativa": "D) Classe", "pergunta": 13 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 13,
+    "fields": { "pergunta": 13, "alternativa": 49 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 14,
+    "fields": {
+      "enunciado": "14. O que falta para funcionar?\ndef teste():\n    print(\"OK\")\n____",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 52,
+    "fields": { "alternativa": "A) print()", "pergunta": 14 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 53,
+    "fields": { "alternativa": "B) return", "pergunta": 14 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 54,
+    "fields": { "alternativa": "C) teste()", "pergunta": 14 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 55,
+    "fields": { "alternativa": "D) input()", "pergunta": 14 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 14,
+    "fields": { "pergunta": 14, "alternativa": 54 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 15,
+    "fields": {
+      "enunciado": "15. Como criar uma lista?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 56,
+    "fields": { "alternativa": "A) {}", "pergunta": 15 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 57,
+    "fields": { "alternativa": "B) []", "pergunta": 15 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 58,
+    "fields": { "alternativa": "C) ()", "pergunta": 15 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 59,
+    "fields": { "alternativa": "D) <>", "pergunta": 15 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 15,
+    "fields": { "pergunta": 15, "alternativa": 57 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 16,
+    "fields": {
+      "enunciado": "16. Qual será a saída?\nlista = [10, 20, 30]\nprint(lista[-1])",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 60,
+    "fields": { "alternativa": "A) 0", "pergunta": 16 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 61,
+    "fields": { "alternativa": "B) 30", "pergunta": 16 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 62,
+    "fields": { "alternativa": "C) 20", "pergunta": 16 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 63,
+    "fields": { "alternativa": "D) Erro", "pergunta": 16 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 16,
+    "fields": { "pergunta": 16, "alternativa": 61 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 17,
+    "fields": {
+      "enunciado": "17. Como acessar o primeiro elemento?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 64,
+    "fields": { "alternativa": "A) lista[1]", "pergunta": 17 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 65,
+    "fields": { "alternativa": "B) lista[0]", "pergunta": 17 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 66,
+    "fields": { "alternativa": "C) lista[-1]", "pergunta": 17 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 67,
+    "fields": { "alternativa": "D) lista.first()", "pergunta": 17 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 17,
+    "fields": { "pergunta": 17, "alternativa": 65 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 18,
+    "fields": {
+      "enunciado": "18. O que esse código faz?\nlista = []\nlista.append(5)",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 68,
+    "fields": { "alternativa": "A) Remove valor", "pergunta": 18 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 69,
+    "fields": { "alternativa": "B) Adiciona 5", "pergunta": 18 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 70,
+    "fields": { "alternativa": "C) Substitui lista", "pergunta": 18 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 71,
+    "fields": { "alternativa": "D) Dá erro", "pergunta": 18 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 18,
+    "fields": { "pergunta": 18, "alternativa": 69 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 19,
+    "fields": {
+      "enunciado": "19. O que é um dicionário?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 72,
+    "fields": { "alternativa": "A) Lista", "pergunta": 19 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 73,
+    "fields": { "alternativa": "B) Chave e valor", "pergunta": 19 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 74,
+    "fields": { "alternativa": "C) Número", "pergunta": 19 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 75,
+    "fields": { "alternativa": "D) Texto", "pergunta": 19 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 19,
+    "fields": { "pergunta": 19, "alternativa": 73 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 20,
+    "fields": {
+      "enunciado": "20. Qual será a saída?\npessoa = {\"nome\": \"Ana\"}\nprint(pessoa[\"nome\"])",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 76,
+    "fields": { "alternativa": "A) nome", "pergunta": 20 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 77,
+    "fields": { "alternativa": "B) Ana", "pergunta": 20 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 78,
+    "fields": { "alternativa": "C) Erro", "pergunta": 20 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 79,
+    "fields": { "alternativa": "D) None", "pergunta": 20 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 20,
+    "fields": { "pergunta": 20, "alternativa": 77 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 21,
+    "fields": {
+      "enunciado": "21. Como acessar um valor no dicionário?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 80,
+    "fields": { "alternativa": "A) dict[0]", "pergunta": 21 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 81,
+    "fields": { "alternativa": "B) dict.chave", "pergunta": 21 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 82,
+    "fields": { "alternativa": "C) dict[\"chave\"]", "pergunta": 21 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 83,
+    "fields": { "alternativa": "D) dict()", "pergunta": 21 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 21,
+    "fields": { "pergunta": 21, "alternativa": 82 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 22,
+    "fields": {
+      "enunciado": "22. O que esse código faz?\naluno = {}\naluno[\"nome\"] = \"Carlos\"",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 84,
+    "fields": { "alternativa": "A) Remove item", "pergunta": 22 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 85,
+    "fields": { "alternativa": "B) Cria lista", "pergunta": 22 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 86,
+    "fields": { "alternativa": "C) Adiciona chave e valor", "pergunta": 22 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 87,
+    "fields": { "alternativa": "D) Dá erro", "pergunta": 22 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 22,
+    "fields": { "pergunta": 22, "alternativa": 86 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 23,
+    "fields": {
+      "enunciado": "23. Como criar um dicionário corretamente?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 88,
+    "fields": { "alternativa": "A) [\"nome\", \"João\"]", "pergunta": 23 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 89,
+    "fields": { "alternativa": "B) (\"nome\", \"João\")", "pergunta": 23 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 90,
+    "fields": { "alternativa": "C) {\"nome\": \"João\"}", "pergunta": 23 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 91,
+    "fields": { "alternativa": "D) nome = João", "pergunta": 23 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 23,
+    "fields": { "pergunta": 23, "alternativa": 90 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 24,
+    "fields": {
+      "enunciado": "24. O que é uma classe?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 92,
+    "fields": { "alternativa": "A) Função", "pergunta": 24 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 93,
+    "fields": { "alternativa": "B) Molde para objetos", "pergunta": 24 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 94,
+    "fields": { "alternativa": "C) Variável", "pergunta": 24 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 95,
+    "fields": { "alternativa": "D) Lista", "pergunta": 24 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 24,
+    "fields": { "pergunta": 24, "alternativa": 93 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 25,
+    "fields": {
+      "enunciado": "25. Complete:\n_____ Pessoa:\n    pass",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 96,
+    "fields": { "alternativa": "A) def", "pergunta": 25 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 97,
+    "fields": { "alternativa": "B) class", "pergunta": 25 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 98,
+    "fields": { "alternativa": "C) func", "pergunta": 25 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 99,
+    "fields": { "alternativa": "D) create", "pergunta": 25 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 25,
+    "fields": { "pergunta": 25, "alternativa": 97 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 26,
+    "fields": {
+      "enunciado": "26. O que é um objeto?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 100,
+    "fields": { "alternativa": "A) Classe", "pergunta": 26 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 101,
+    "fields": { "alternativa": "B) Instância de classe", "pergunta": 26 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 102,
+    "fields": { "alternativa": "C) Função", "pergunta": 26 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 103,
+    "fields": { "alternativa": "D) Loop", "pergunta": 26 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 26,
+    "fields": { "pergunta": 26, "alternativa": 101 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 27,
+    "fields": {
+      "enunciado": "27. O que esse código faz?\nclass Pessoa:\n    pass\np = Pessoa()",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 104,
+    "fields": { "alternativa": "A) Cria função", "pergunta": 27 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 105,
+    "fields": { "alternativa": "B) Cria objeto", "pergunta": 27 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 106,
+    "fields": { "alternativa": "C) Dá erro", "pergunta": 27 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 107,
+    "fields": { "alternativa": "D) Cria lista", "pergunta": 27 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 27,
+    "fields": { "pergunta": 27, "alternativa": 105 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 28,
+    "fields": {
+      "enunciado": "28. Complete o construtor:\nclass Pessoa:\n    def ______(self, nome):\n        self.nome = nome",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 108,
+    "fields": { "alternativa": "A) init", "pergunta": 28 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 109,
+    "fields": { "alternativa": "B) __init__", "pergunta": 28 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 110,
+    "fields": { "alternativa": "C) start", "pergunta": 28 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 111,
+    "fields": { "alternativa": "D) create", "pergunta": 28 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 28,
+    "fields": { "pergunta": 28, "alternativa": 109 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 29,
+    "fields": {
+      "enunciado": "29. Qual será a saída?\nclass Pessoa:\n    def __init__(self, nome):\n        self.nome = nome\np = Pessoa(\"Ana\")\nprint(p.nome)",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 112,
+    "fields": { "alternativa": "A) nome", "pergunta": 29 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 113,
+    "fields": { "alternativa": "B) Ana", "pergunta": 29 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 114,
+    "fields": { "alternativa": "C) Pessoa", "pergunta": 29 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 115,
+    "fields": { "alternativa": "D) Erro", "pergunta": 29 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 29,
+    "fields": { "pergunta": 29, "alternativa": 113 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 30,
+    "fields": {
+      "enunciado": "30. O que é self?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 116,
+    "fields": { "alternativa": "A) Variável global", "pergunta": 30 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 117,
+    "fields": { "alternativa": "B) Referência ao objeto", "pergunta": 30 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 118,
+    "fields": { "alternativa": "C) Função", "pergunta": 30 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 119,
+    "fields": { "alternativa": "D) Loop", "pergunta": 30 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 30,
+    "fields": { "pergunta": 30, "alternativa": 117 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 31,
+    "fields": {
+      "enunciado": "31. O que é um atributo?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 120,
+    "fields": { "alternativa": "A) Função", "pergunta": 31 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 121,
+    "fields": { "alternativa": "B) Característica do objeto", "pergunta": 31 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 122,
+    "fields": { "alternativa": "C) Loop", "pergunta": 31 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 123,
+    "fields": { "alternativa": "D) Classe", "pergunta": 31 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 31,
+    "fields": { "pergunta": 31, "alternativa": 121 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 32,
+    "fields": {
+      "enunciado": "32. O que é um método?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 124,
+    "fields": { "alternativa": "A) Variável", "pergunta": 32 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 125,
+    "fields": { "alternativa": "B) Função dentro da classe", "pergunta": 32 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 126,
+    "fields": { "alternativa": "C) Lista", "pergunta": 32 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 127,
+    "fields": { "alternativa": "D) Tipo", "pergunta": 32 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 32,
+    "fields": { "pergunta": 32, "alternativa": 125 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 33,
+    "fields": {
+      "enunciado": "33. O que esse código representa?\nclass Animal:\n    pass\nclass Cachorro(Animal):\n    pass",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 128,
+    "fields": { "alternativa": "A) Lista", "pergunta": 33 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 129,
+    "fields": { "alternativa": "B) Função", "pergunta": 33 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 130,
+    "fields": { "alternativa": "C) Herança", "pergunta": 33 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 131,
+    "fields": { "alternativa": "D) Condição", "pergunta": 33 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 33,
+    "fields": { "pergunta": 33, "alternativa": 130 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 34,
+    "fields": {
+      "enunciado": "34. O que está errado?\nclass Pessoa:\n    def init(self):\n        pass",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 132,
+    "fields": { "alternativa": "A) Falta class", "pergunta": 34 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 133,
+    "fields": { "alternativa": "B) Falta self", "pergunta": 34 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 134,
+    "fields": { "alternativa": "C) Falta __ no init", "pergunta": 34 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 135,
+    "fields": { "alternativa": "D) Nada", "pergunta": 34 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 34,
+    "fields": { "pergunta": 34, "alternativa": 134 }
+  },
+  {
+    "model": "app.pergunta",
+    "pk": 35,
+    "fields": {
+      "enunciado": "35. Em Python, qual é a função da identação no código?",
+      "simulado": 1
+    }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 136,
+    "fields": { "alternativa": "A) Melhorar apenas a estética do código, sem impacto na execução", "pergunta": 35 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 137,
+    "fields": { "alternativa": "B) Definir blocos de código, como estruturas de controle e funções", "pergunta": 35 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 138,
+    "fields": { "alternativa": "C) Substituir o uso de comentários no código", "pergunta": 35 }
+  },
+  {
+    "model": "app.alternativa",
+    "pk": 139,
+    "fields": { "alternativa": "D) Indicar ao interpretador quais bibliotecas devem ser importadas", "pergunta": 35 }
+  },
+  {
+    "model": "app.respostacorreta",
+    "pk": 35,
+    "fields": { "pergunta": 35, "alternativa": 137 }
+  }
+]
