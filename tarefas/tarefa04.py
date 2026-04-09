@@ -45,7 +45,7 @@ while True:
                 print("Nenhum contato com esse nome encontrado.")
 
         case 3:
-            i = 1;
+            i = 1
             print("\n--Lista de Contatos: ")
             for contato, tel in lista_telefonica.items():
                 print(f"{i}.{contato}: {formatarNumero(tel)}")
