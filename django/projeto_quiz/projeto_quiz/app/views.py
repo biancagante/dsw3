@@ -25,3 +25,18 @@ def perguntar(request):
     # _alternativas = Alternativa.objects.all().values()
     # 'alternativas': _alternativas
     return render(request, 'pages/simulado.html', {'perguntas': _perguntas})
+
+def responder(request):
+    respostas_usuario = []
+    respostas_simulado = []
+    # Arrumar em outro formato para organizar: questão, resposta do usuário e resposta correta em uma única estrutura por linha
+    if request.POST:
+        for pergunta, alternativa_escolhida in request.POST.items():
+            if pergunta.startswith('pergunta_'):
+                respostas_usuario.append(alternativa_escolhida)
+
+        for p in perguntas:
+            for resposta_correta in p['resposta']:
+                respostas_simulado.append(resposta_correta)
+
+    return render(request, 'pages/respostas.html', {'respostas_usuario': respostas_usuario, 'respostas_simulado': respostas_simulado})
