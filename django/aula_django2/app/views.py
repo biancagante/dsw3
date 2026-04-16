@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from app.models import Categoria, Contato
-from app.forms import FormCategoria, FormContato
+from app.models import Categoria, Contato, Produto
+from app.forms import FormCategoria, FormContato, FormProduto
 
 # Create your views here.
 def index(request):
@@ -63,3 +63,21 @@ def delContato(request, id_cont):
     _contato = Contato.objects.get(id=id_cont)
     _contato.delete()
     return redirect('listarcontatos')
+
+def addProduto(request):
+    if request.method == 'POST':
+        form = FormProduto(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('produtos')
+    else:
+        form = FormProduto()
+
+    return render(request, 'add-produto.html', {'form': form})
+
+def listarProdutos(request):
+    _produtos = Produto.objects.all()
+    return render(request, 'produtos.html', {'produtos': _produtos})
+
+def editarProduto(request):
+    pass

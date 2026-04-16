@@ -12,4 +12,7 @@ urlpatterns = [
     path('listar-contatos', views.listarContatos, name='listarcontatos'),
     path('edit-contato/<int:id_cont>', views.editContato, name='editcontato'),
     path('del-contato/<int:id_cont>', views.delContato, name='delcontato'),
+    path('produtos', views.listarProdutos, name='produtos'),
+    path('add-produto', views.addProduto, name='addproduto'),
+    # path('edit-produto/<int:id_prod>')
 ]

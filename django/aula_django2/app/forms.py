@@ -1,14 +1,15 @@
 from django import forms
-from app.models import Categoria, Contato
+from app.models import Categoria, Contato, Produto
 
 class FormCategoria(forms.ModelForm):
     # especificar as config do modelo a ser utilizado
-    class Meta():
+    class Meta:
         model = Categoria
         fields = ['nome']
 
+
 class FormContato(forms.ModelForm):
-    class Meta():
+    class Meta:
         model = Contato
         fields = ['nome', 'email', 'assunto', 'mensagem']
         widgets = {
@@ -17,3 +18,8 @@ class FormContato(forms.ModelForm):
                 'required': True
             })
         }
+
+class FormProduto(forms.ModelForm):
+    class Meta:
+        model = Produto
+        fields = ['nome', 'imagem', 'quantidade', 'preco', 'categoria']

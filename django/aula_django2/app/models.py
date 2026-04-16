@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 class Categoria(models.Model):
     nome= models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nome
     
 
 class Contato(models.Model):
@@ -14,3 +17,10 @@ class Contato(models.Model):
 
     def __str__(self):
         return [self.nome, self.email, self.assunto, self.mensagem, self.data_envio]
+
+class Produto(models.Model):
+    nome = models.CharField(max_length=100)
+    imagem = models.ImageField(upload_to='produtos/')
+    quantidade = models.IntegerField()
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)

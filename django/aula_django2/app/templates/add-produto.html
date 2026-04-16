@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Adicionar novo produto
+{% endblock %}
+
+{% block conteudo %}
+    <div class="divFormContato">
+        <form action="" method="POST" enctype="multipart/form-data" class="formContato">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Adicionar produto">
+        </form>
+    </div>
+{% endblock %}

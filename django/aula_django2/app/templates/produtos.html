@@ -1,0 +1,24 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Produtos
+{% endblock %}
+
+{% block conteudo %}
+    <a href="{% url 'addproduto' %}">Adicionar Produto</a>
+    <div style="display: flex;">
+        {% for produto in produtos %}
+            <div class="cardProduto">
+                <img src="media/{{ produto.imagem }}" alt="" width="180px">
+                <p>Nome: {{produto.nome}}</p>
+                <p>Quantidade: {{produto.quantidade}}</p>
+                <p>Categoria: {{ produto.categoria }}</p>
+                <p>Preço: R${{produto.preco}}</p>
+                <div>
+                    <a href="" class="edit">Editar</a>
+                    <a href="" class="delete">Deletar</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
