@@ -5,14 +5,27 @@
 {% endblock %}
 
 {% block conteudo %}
+<section style="display: flex; flex-direction: column;">
     <table>
         <thead>
             <th>Questão</th>
             <th>Sua resposta</th>
             <th>Resposta correta</th>
+            <th>Acertos</th>
         </thead>
         <tbody>
-            
+            {% for questao in respostas_simulado %}
+            <tr width="100%">
+                <td>{{questao.pergunta}}</td>
+                <td>{{questao.resposta_usuario}}</td>
+                <td>{{questao.resposta_correta}}</td>
+                <td>{{ questao.acertou|yesno:'Acertou,Errou' }}</td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
+    <div style="display: flex;">
+        <p>Acertos: {{contador}}</p> 
+    </div>
+</section>
 {% endblock %}

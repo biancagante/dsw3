@@ -15,7 +15,7 @@ Quiz
                 {% for a in p.alternativas %}
                     <div class="p-2 bg-zinc-700 rounded-lg m-2 hover:bg-zinc-600 opcaoQuiz">
                                                 <!-- o slice pegará o primeiro caractere do enunciado, que é 1, 2, 3, e no value irá pegar o caractere da alternativa escolhida: A, B, C... -->
-                        <input type="radio" name="pergunta_{{ p.enunciado|slice:':1' }}" value="{{ a|slice:':1' }}" class="peer">
+                        <input type="radio" name="pergunta_{{ forloop.parentloop.counter0 }}" value="{{ a|slice:':1' }}" class="peer" required>
                         <label for="alternativas">{{ a }}</label>
                     </div>
                 {% endfor %}
