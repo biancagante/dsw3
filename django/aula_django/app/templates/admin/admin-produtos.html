@@ -15,8 +15,8 @@
                 <p>Categoria: {{ produto.categoria }}</p>
                 <p>Preço: R${{produto.preco}}</p>
                 <div>
-                    <a href="" class="edit">Editar</a>
-                    <a href="" class="delete">Deletar</a>
+                    <a href="{% url 'editproduto' produto.id %}" class="edit">Editar</a>
+                    <a href="{% url 'delproduto' produto.id %}" class="delete">Deletar</a>
                 </div>
             </div>
         {% endfor %}

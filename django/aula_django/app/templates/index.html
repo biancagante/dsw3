@@ -5,7 +5,23 @@
 {% endblock %}
 
 {% block conteudo %}
-    <h1>Olá mundo</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maxime, accusamus, quo alias dolores odit vitae cupiditate eius quasi fugit accusantium enim eaque. Tenetur eum, voluptatum rerum expedita debitis sit!</p>
+    <section class="section hero">
+        <div class="hero-bg" style="background-image: url('https://cdn.alromaizan.com/image/upload/f_webp,q_100/media/images/niqsxka5taol983l3dgz.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="text-5xl">Joias que contam sua história</h1>
+            <p class="hero-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <a href="{% url 'criarconta' %}" class="btn">Crie sua conta</a>
+        </div>
+    </section>
+    <section class="section p-12 gap-3">
+        <h2 class="text-3xl">O que fazemos</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas impedit illum soluta, cumque laborum assumenda earum aspernatur quia itaque dolores animi optio necessitatibus culpa quos architecto reiciendis ullam praesentium.</p>
+    </section>
+    <section class="section">
+        prodtuinhos
+    </section>
+    <section class="section">
+        fale conosco
+    </section>
 {% endblock %}

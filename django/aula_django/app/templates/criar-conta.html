@@ -1,0 +1,21 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Criar conta
+{% endblock %}
+
+{% block conteudo %}
+<section class="section min-h-[80vh] flex items-center justify-center">
+    <div class="form-container">
+        <h1 class="form-title">Criar conta</h1>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="form-button">
+                Criar nova conta
+            </button>
+
+        </form>
+    </div>
+</section>
+{% endblock %}

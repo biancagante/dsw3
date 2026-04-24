@@ -1,24 +1,33 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind -->
+    <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block titulo %}{% endblock %}</title>
 </head>
-<body data-theme="dark">
-    <header>
-        <h4>Django</h4>
-        <nav>
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'categoria' %}">Categorias</a>
-            <a href="{% url 'addcontato' %}">Contato</a>
-            <a href="{% url 'produtos' %}">Produtos</a>
-        </nav>
+<body class="bg-zinc-100 text-zinc-900 min-h-screen flex flex-col">
+    <header class="bg-zinc-800 border-b border-zinc-700 text-zinc-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <h4 class="text-2xl">Ouro Luso</h4>
+            <nav class="flex gap-6 text-sm">
+                <a href="{% url 'index' %}" class="link">Home</a>
+                <a href="{% url 'quemsomos' %}" class="link">Quem somos</a>
+                <a href="{% url 'categoria' %}" class="link">Categorias</a>
+                <a href="{% url 'addcontato' %}" class="link">Contato</a>
+                <a href="{% url 'produtos' %}" class="link">Produtos</a>
+                <a href="{% url 'dashboard' %}" class="link">Dashboard</a>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="flex-1 max-w mx-auto w-full">
         {% block conteudo %}{% endblock %}
     </main>
+    <footer class="bg-zinc-800 border-t border-zinc-700 text-center text-sm py-4 text-zinc-400">
+        Desenvolvimento Web III - Projeto 2026
+    </footer>
 </body>
 </html>

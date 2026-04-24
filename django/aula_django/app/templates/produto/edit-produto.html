@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Editar produto
+{% endblock %}
+
+{% block conteudo %}
+<section class="secao-contato">
+    <h1>Editar Produto</h1>
+    <form method="post" class="form-contato" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Atualizar">
+    </form>
+</section>
+{% endblock %}

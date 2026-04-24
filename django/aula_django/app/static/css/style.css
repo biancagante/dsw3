@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,7 +30,7 @@ nav {
 
 main {
     width: 100%;
-    padding: 24px;
+    // padding: 24px; 
 }
 
 h4 {
@@ -56,7 +56,7 @@ a:hover {
     gap: 8px;
 }
 
-input, textarea, select {
+input, textarea, select, button {
     padding: 12px;
     border-radius: 8px;
     border: 0.5px solid #d0d0d0;
@@ -72,7 +72,7 @@ input:focus {
     box-shadow: 0 0 0 3px rgba(45, 138, 62, 0.1);
 }
 
-input[type="submit"] {
+input[type="submit"], .edit {
     background-color: #2d8a3e;
     color: white;
     font-weight: 500;
@@ -204,6 +204,51 @@ tr:hover td {
     gap: 5px;
 }
 
+.cardProduto img {
+    width: 100%;
+    height: 200px;
+}
+
 .cardProduto p {
     width: 100%;
 }
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 8vw;
+    background-image: url('https://www.odu.edu/sites/default/files/program-page/headerimages/computer-engineering-header.jpeg');
+    color: white;
+}
+
+.section img {
+    position: absolute;
+    background-color: #1a1a1a;
+}
+
+.helptext {
+    color: #666;
+    font-size: 12px;
+}
+
+ul li {
+    color: #c0392b;
+    list-style-type:'x ';
+    font-size: 12px;
+}
+
+form label {
+        order: 1;
+    }
+
+form input {
+    order: 2;
+}
+
+form .helptext, ul li {
+    order: 3;
+} */

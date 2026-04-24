@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+@import "tailwindcss";
+/**
+  * A catch-all path to Django template files, JavaScript, and Python files
+  * that contain Tailwind CSS classes and will be scanned by Tailwind to generate the final CSS file.
+  *
+  * If your final CSS file is not being updated after code changes, you may want to broaden or narrow
+  * the scope of this path.
+  */
+@source "../../../**/*.{html,py,js}";
+
+@theme {
+  --font-title: "Libre Caslon Display";
+}
+
+@layer components {
+  .link {
+    @apply transition hover:text-amber-200;
+  }
+
+  .section {
+    @apply relative mx-auto flex flex-col items-center justify-center;
+  }
+
+  .hero {
+    @apply gap-5 text-white min-h-[600px] overflow-hidden;
+  }
+
+  .hero-bg {
+    @apply absolute inset-0 bg-cover bg-center;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-yellow-950/50;
+  }
+
+  .hero-content {
+    @apply relative z-10 text-center max-w-2xl px-4;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-wide font-title;
+  }
+
+  .hero-text {
+    @apply text-zinc-300 mt-2;
+  }
+
+  .btn {
+    @apply inline-block mt-4 bg-zinc-900 hover:bg-zinc-800 px-6 py-2 font-semibold rounded-lg transition;
+  }
+
+  .form {
+    @apply w-full max-w-xl mx-auto bg-zinc-50 p-8 rounded-2xl shadow-lg border border-zinc-800;
+  }
+
+  .form-group {
+    @apply flex flex-col gap-1 mb-4;
+  }
+
+  .form-container {
+    @apply w-full max-w-md mx-auto bg-zinc-100 p-8 rounded-2xl shadow-lg border border-zinc-400;
+  }
+
+  .form-title {
+    @apply text-2xl font-semibold mb-6 text-center;
+  }
+
+  .form-group {
+    @apply flex flex-col gap-1;
+  }
+
+  .form-label {
+    @apply text-sm text-zinc-700;
+  }
+
+  .form-input {
+    @apply w-full bg-zinc-100 border border-zinc-700 rounded-lg p-4 border-zinc-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition;
+  }
+
+  .form-button {
+    @apply w-full mt-4 bg-green-600 hover:bg-green-500 
+           text-white font-semibold py-2 rounded-lg transition;
+  }
+}

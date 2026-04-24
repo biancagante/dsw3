@@ -1,0 +1,19 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Usuários
+{% endblock %}
+
+{% block conteudo %}
+    <!-- <a href="{% url 'addproduto' %}">Adicionar Produto</a> -->
+    <div style="display: flex;">
+        {% for user in usuarios %}
+            <div class="cardProduto">
+                <!-- <img src="media/{{ produto.imagem }}" alt="" width="180px"> -->
+                <p>{{ user.username }}</p>
+                <p>{{ user.email }}</p>
+                <!-- <p>{{ user.email }}</p> -->
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

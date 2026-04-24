@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block titulo %}
+    Dashboard
+{% endblock %}
+
+{% block conteudo %}
+    <section>
+        <div class="card">
+            <a href="{% url 'adminproduto' %}">Produtos</a>
+        </div>
+        <div class="card">
+            <a href="{% url 'adminusuarios' %}">Usuários</a>
+        </div>
+    </section>
+{% endblock %}
