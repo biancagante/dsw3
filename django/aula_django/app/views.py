@@ -18,7 +18,7 @@ def listarCategoria(request):
     _categorias=Categoria.objects.all().values()
     return render(request, 'categoria/categoria.html', {'categorias':_categorias})
 
-def delCategoria(id_cat):
+def delCategoria(request, id_cat):
     _categoria = Categoria.objects.get(id=id_cat)
     _categoria.delete()
     return redirect('categoria')
@@ -110,11 +110,13 @@ def delProduto(request, id_prod):
     return redirect('adminproduto')
 
 def criarConta(request):
-    form = FormUsuario(request.POST)
     if request.method == 'POST':
+        form = FormUsuario(request.POST)
         if form.is_valid():
             form.save()
             return redirect('index')
+    else:
+        form = FormUsuario()
 
     return render(request, 'criar-conta.html', {'form': form})
 

@@ -1,21 +1,35 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Produtos
-{% endblock %}
+{% block titulo %}Produtos{% endblock %}
 
 {% block conteudo %}
-    <a href="{% url 'addproduto' %}">Adicionar Produto</a>
-    <div style="display: flex;">
-        {% for produto in produtos %}
-            <div class="cardProduto">
-                <img src="media/{{ produto.imagem }}" alt="" width="180px">
-                <p>Nome: {{produto.nome}}</p>
-                <p>Quantidade: {{produto.quantidade}}</p>
-                <p>Categoria: {{ produto.categoria }}</p>
-                <p>Preço: R${{produto.preco}}</p>
-                <a href="edit">Comprar</a>
-            </div>
-        {% endfor %}
-    </div>
+    <section class="section-products">
+        <div class="products-header">
+            <h1 class="products-title">Produtos</h1>
+            <!-- <a href="{% url 'addproduto' %}" class="btn-primary">+ Adicionar Produto</a> -->
+        </div>
+        <div class="products-grid">
+            {% for produto in produtos %}
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="media/{{ produto.imagem }}" class="product-image">
+                        <span class="product-chip">{{ produto.categoria }}</span>
+                    </div>
+                    <div class="product-content">
+                        <h2 class="product-name">{{ produto.nome }}</h2>
+                        <div class="product-meta">
+                            <span>Qtd: {{ produto.quantidade }}</span>
+                        </div>
+                        <p class="product-price">R$ {{ produto.preco }}</p>
+
+                        <div class="product-actions">
+                            <a href="edit" class="btn-secondary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="products-empty">Nenhum produto cadastrado.</p>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

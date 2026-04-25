@@ -1,35 +1,46 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Administrar contatos
-{% endblock%}
+{% block titulo %}Administrar contatos{% endblock %}
 
 {% block conteudo %}
-    <h1>Todos os contatos</h1>
-    <br><br>
-    <table>
-        <thead>
-            <tr>
-                <td>Nome</td>
-                <td>Email</td>
-                <td>Assunto</td>
-                <td>Mensagem</td>
-                <td>Data de Envio</td>
-                <td>Ações</td>
-        </thead>
-        </tr>
-        {% for msg in contatos %}
-            <tr>
-                <td>{{ msg.nome }}</td>
-                <td>{{ msg.email }}</td>
-                <td>{{ msg.assunto }}</td>
-                <td>{{ msg.mensagem }}</td>
-                <td>{{ msg.data_envio }}</td>
-                <td>
-                    <a href="{% url 'editcontato' msg.id %}" class="edit">Editar</a>
-                    <!-- <a href="{% url 'delcontato' msg.id %}" class="delete">Excluir</a> -->
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+<section class="section mx-auto py-12 px-4">
+    <div class="w-7xl flex items-center justify-between mb-6 change-title">
+        <h1 class="text-2xl font-semibold text-zinc-800">Todos os contatos</h1>
+        <a href="{% url 'dashboard' %}">< Voltar</a>
+    </div>
+    <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-zinc-200">
+        <table class="w-7xl text-sm text-left text-zinc-700">
+            <thead class="bg-zinc-100 text-xs uppercase text-zinc-600">
+                <tr>
+                    <th class="px-6 py-3">Nome</th>
+                    <th class="px-6 py-3">Email</th>
+                    <th class="px-6 py-3">Assunto</th>
+                    <th class="px-6 py-3">Mensagem</th>
+                    <th class="px-6 py-3">Data de envio</th>
+                    <th class="px-6 py-3 text-right">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-200">
+                {% for msg in contatos %}
+                    <tr class="hover:bg-zinc-50 transition">
+                        <td class="px-6 py-4 font-medium text-zinc-900">{{ msg.nome }}</td>
+                        <td class="px-6 py-4">{{ msg.email }}</td>
+                        <td class="px-6 py-4">{{ msg.assunto }}</td>
+                        <td class="px-6 py-4 max-w-xs truncate">{{ msg.mensagem }}</td>
+                        <td class="px-6 py-4">{{ msg.data_envio }}</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="flex justify-end gap-2">
+                                <a href="{% url 'editcontato' msg.id %}" class="text-blue-600 hover:underline text-sm">Editar</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="6" class="px-6 py-6 text-center text-zinc-500">Nenhum contato encontrado.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
 {% endblock %}

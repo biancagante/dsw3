@@ -1,15 +1,19 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Adicionar novo produto
-{% endblock %}
+{% block titulo %}Adicionar novo produto{% endblock %}
 
 {% block conteudo %}
-    <div class="divFormContato">
-        <form action="" method="POST" enctype="multipart/form-data" class="formContato">
+<section class="section">
+    <div class="change-container">
+        <div class="change-title">
+            <h1>Adicionar Produto</h1>
+            <a href="{% url 'produtos' %}">< Voltar</a>
+        </div>
+        <form action="" method="POST" enctype="multipart/form-data" class="form">
             {% csrf_token %}
             {{ form }}
-            <input type="submit" value="Adicionar produto">
+            <input type="submit" value="Adicionar" class="btn">
         </form>
     </div>
+</section>
 {% endblock %}

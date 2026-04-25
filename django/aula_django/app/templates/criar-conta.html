@@ -5,16 +5,13 @@
 {% endblock %}
 
 {% block conteudo %}
-<section class="section min-h-[80vh] flex items-center justify-center">
+<section class="section h-screen mx-auto">
     <div class="form-container">
         <h1 class="form-title">Criar conta</h1>
-        <form method="post" class="space-y-4">
+        <form method="post" class="form">
             {% csrf_token %}
-            {{form}}
-            <button type="submit" class="form-button">
-                Criar nova conta
-            </button>
-
+            {{ form.as_p }}
+            <button type="submit" class="btn">Criar nova conta</button>
         </form>
     </div>
 </section>

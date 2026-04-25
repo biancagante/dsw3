@@ -1,16 +1,19 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Editar produto
-{% endblock %}
+{% block titulo %}Editar Produto{% endblock %}
 
 {% block conteudo %}
-<section class="secao-contato">
-    <h1>Editar Produto</h1>
-    <form method="post" class="form-contato" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Atualizar">
-    </form>
+<section class="section">
+    <div class="change-container">
+        <div class="change-title">
+            <h1>Editar Produto</h1>
+            <a href="{% url 'adminproduto' %}">< Voltar</a>
+        </div>
+        <form method="post" class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Atualizar" class="btn">
+        </form>
+    </div>
 </section>
 {% endblock %}

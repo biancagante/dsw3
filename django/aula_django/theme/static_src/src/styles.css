@@ -35,7 +35,7 @@
   }
 
   .hero-content {
-    @apply relative z-10 text-center max-w-2xl px-4;
+    @apply relative z-10 text-center max-w-3xl px-4;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -50,36 +50,230 @@
     @apply inline-block mt-4 bg-zinc-900 hover:bg-zinc-800 px-6 py-2 font-semibold rounded-lg transition;
   }
 
-  .form {
-    @apply w-full max-w-xl mx-auto bg-zinc-50 p-8 rounded-2xl shadow-lg border border-zinc-800;
-  }
-
-  .form-group {
-    @apply flex flex-col gap-1 mb-4;
-  }
-
   .form-container {
-    @apply w-full max-w-md mx-auto bg-zinc-100 p-8 rounded-2xl shadow-lg border border-zinc-400;
+    @apply bg-zinc-200 p-8 flex flex-col rounded-2xl shadow-xl;
+  }
+
+  .form {
+    @apply flex flex-col gap-2;
   }
 
   .form-title {
-    @apply text-2xl font-semibold mb-6 text-center;
+    @apply text-4xl;
   }
 
-  .form-group {
-    @apply flex flex-col gap-1;
+  .form input, .form textarea, .form select {
+    @apply w-full bg-zinc-50 p-2 border border-zinc-400 rounded-md;
   }
 
-  .form-label {
-    @apply text-sm text-zinc-700;
+  .form ul li, .form span {
+    @apply text-red-800 text-sm;
   }
 
-  .form-input {
-    @apply w-full bg-zinc-100 border border-zinc-700 rounded-lg p-4 border-zinc-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition;
+  .form .btn {
+    @apply text-zinc-50 bg-zinc-800;
   }
 
-  .form-button {
-    @apply w-full mt-4 bg-green-600 hover:bg-green-500 
-           text-white font-semibold py-2 rounded-lg transition;
+  .change-container {
+    @apply w-4xl mx-auto py-8 px-4;
   }
+
+  .change-container h1, h2, h3, h4 {
+    @apply text-2xl;
+  }
+
+  .change-title {
+    @apply flex items-center justify-between;
+  }
+
+  .change-title a {
+    @apply text-blue-700;
+  }
+  
+  .section-products {
+        @apply max-w-7xl mx-auto py-12 px-6;
+    }
+
+    .products-header {
+        @apply flex items-center justify-between mb-10;
+    }
+
+    .products-title {
+        @apply text-3xl font-semibold text-zinc-800;
+    }
+
+    .products-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8;
+    }
+
+    .product-card {
+        @apply bg-white rounded-2xl border border-zinc-200 shadow-sm overflow-hidden transition hover:shadow-xl;
+    }
+
+    .product-image-wrapper {
+        @apply relative w-full h-52 overflow-hidden bg-zinc-100;
+    }
+
+    .product-image {
+        @apply w-full h-full object-cover transition duration-300 hover:scale-105;
+    }
+
+    .product-chip {
+        @apply absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded-full backdrop-blur;
+    }
+
+    .product-content {
+        @apply p-5 flex flex-col gap-2;
+    }
+
+    .product-name {
+        @apply text-2xl font-semibold text-zinc-800 truncate;
+    }
+
+    .product-meta {
+        @apply text-sm text-zinc-500;
+    }
+
+    .product-price {
+        @apply text-lg font-bold text-zinc-900 mt-2;
+    }
+
+    .product-actions {
+        @apply mt-4;
+    }
+
+    .btn-primary {
+        @apply bg-zinc-900 text-white px-5 py-2.5 rounded-lg text-sm hover:bg-zinc-700 transition;
+    }
+
+    .btn-secondary {
+        @apply block w-full text-center bg-zinc-100 text-zinc-800 py-2 rounded-lg text-sm hover:bg-zinc-200 transition;
+    }
+
+    .products-empty {
+        @apply text-zinc-500 col-span-full text-center;
+    }
+    .dashboard-section {
+        @apply max-w-6xl mx-auto py-12 px-6;
+    }
+
+    .dashboard-header {
+        @apply mb-10;
+    }
+
+    .dashboard-title {
+        @apply text-3xl font-semibold text-zinc-800;
+    }
+
+    .dashboard-subtitle {
+        @apply text-sm text-zinc-500 mt-1;
+    }
+
+    .dashboard-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6;
+    }
+
+    .dashboard-card {
+        @apply block bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm transition hover:shadow-lg hover:-translate-y-1;
+    }
+
+    .dashboard-card-content {
+        @apply flex flex-col gap-2;
+    }
+
+    .dashboard-card-title {
+        @apply text-2xl font-semibold text-zinc-800;
+    }
+
+    .dashboard-card-desc {
+        @apply text-sm text-zinc-500;
+    }
+
+    .section-default {
+        @apply py-16 px-6;
+    }
+
+    .section-alt {
+        @apply py-16 px-6 bg-zinc-50;
+    }
+
+    .container-default {
+        @apply max-w-6xl mx-auto text-center;
+    }
+
+    .section-title {
+        @apply text-3xl font-semibold text-zinc-800 mb-4;
+    }
+
+    .section-text {
+        @apply text-zinc-600 max-w-2xl mx-auto;
+    }
+
+    /* HERO */
+    .hero-section {
+        @apply relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden;
+    }
+
+    .hero-bg {
+        @apply absolute inset-0 bg-cover bg-center;
+    }
+
+    .hero-overlay {
+        @apply absolute inset-0 bg-black/50;
+    }
+
+    .hero-content {
+        @apply relative z-10 max-w-2xl px-4;
+    }
+
+    .hero-title {
+        @apply text-5xl md:text-6xl font-bold mb-4;
+    }
+
+    .hero-text {
+        @apply text-lg text-zinc-200 mb-6;
+    }
+
+    /* BOTÕES */
+    .btn-primary {
+        @apply inline-block bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-zinc-200 transition;
+    }
+
+    .btn-secondary {
+        @apply inline-block bg-zinc-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-zinc-700 transition;
+    }
+
+    /* GRID PRODUTOS */
+    .landing-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8;
+    }
+
+    .landing-card {
+        @apply bg-white rounded-2xl shadow-sm border border-zinc-200 p-6 hover:shadow-lg transition;
+    }
+
+    .landing-card-img {
+        @apply h-40 bg-zinc-200 rounded-lg mb-4;
+    }
+
+    .landing-card-title {
+        @apply text-lg font-semibold text-zinc-800;
+    }
+
+    /* CTA */
+    .cta-section {
+        @apply py-20 px-6 bg-zinc-900 text-white text-center;
+    }
+
+    .cta-box {
+        @apply max-w-3xl mx-auto;
+    }
+
+    .cta-title {
+        @apply text-3xl font-semibold mb-4;
+    }
+
+    .cta-text {
+        @apply text-zinc-300 mb-6;
+    }
 }

@@ -1,26 +1,43 @@
 {% extends 'template.html' %}
 
 {% block titulo %}
-    Django categorias
+    Categorias
 {% endblock %}
 
 {% block conteudo %}
-
-    <h1>Categorias</h1>
-    <hr><br>
-    <a href="{% url 'addcategoria' %}">Adicionar categoria</a>
-    <br><br>
-
-    {% for cat in categorias %}
-    <div class="linha-categoria">
-        <span> 
-            ID:{{cat.id}} - nome: {{cat.nome}}
-        </span>
-        <div class="actBtn">
-            <a href="{% url 'editcategoria' cat.id %}" class="edit">Editar</a>
-            <a href="{% url 'delcategoria' cat.id %}" class="delete">Excluir</a>
-        </div>
+<section class="section mx-auto py-12 px-4">
+    <div class="w-7xl flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-semibold text-zinc-800">Categorias</h1>
+        <a href="{% url 'addcategoria' %}" class="bg-zinc-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-zinc-700 transition">+ Adicionar categoria</a>
     </div>
-    {% endfor%}
-  
+    <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-zinc-200">
+        <table class="w-7xl text-sm text-left text-zinc-700">
+            <thead class="bg-zinc-100 text-xs uppercase text-zinc-600">
+                <tr>
+                    <th class="px-6 py-3">ID</th>
+                    <th class="px-6 py-3">Nome</th>
+                    <th class="px-6 py-3 text-right">Ações</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-200">
+                {% for cat in categorias %}
+                    <tr class="hover:bg-zinc-50 transition">
+                        <td class="px-6 py-4 font-medium text-zinc-900">{{ cat.id }}</td>
+                        <td class="px-6 py-4">{{ cat.nome }}</td>
+                        <td class="px-6 py-4 text-right">
+                            <div class="flex justify-end gap-2">
+                                <a href="{% url 'editcategoria' cat.id %}" class="text-blue-600 hover:underline text-sm">Editar</a>
+                                <a href="{% url 'delcategoria' cat.id %}" class="text-red-600 hover:underline text-sm">Excluir</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="px-6 py-6 text-center text-zinc-500">Nenhuma categoria cadastrada.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
 {% endblock %}

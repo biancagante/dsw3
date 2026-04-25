@@ -8,6 +8,7 @@ class FormCategoria(forms.ModelForm):
     class Meta:
         model = Categoria
         fields = ['nome']
+        widgets = {'nome': forms.TextInput(attrs={'placeholder': 'Digite o nome da nova categoria', 'required': True})}
 
 
 class FormContato(forms.ModelForm):
@@ -18,7 +19,8 @@ class FormContato(forms.ModelForm):
             'email': forms.EmailInput(attrs={
                 'placeholder': 'email@email.com',
                 'required': True
-            })
+            }),
+            'nome': forms.TextInput(attrs={'placeholder': 'Digite seu nome'})
         }
 
 class FormProduto(forms.ModelForm):
@@ -31,7 +33,15 @@ class FormUsuario(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         labels = {'username': 'Nome', 'email': 'E-mail'}
-
+        widgets = {
+            'username': forms.TextInput(attrs={'placeholder': 'Digite seu nome', 'required': True}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Digite seu e-mail', 'required': True}),
+        }
+    
+    def __init__(self, *args):
+        super().__init__(*args)
+        self.fields['password1'].widget.attrs['placeholder'] = 'Digite sua senha de acordo com as instruções abaixo'
+        self.fields['password2'].widget.attrs['placeholder'] = 'Repita a senha criada acima'
 class FormEditarUsuario(forms.ModelForm):
     class Meta:
         model = User

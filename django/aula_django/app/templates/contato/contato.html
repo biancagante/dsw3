@@ -5,12 +5,17 @@
 {% endblock%}
 
 {% block conteudo %}
-    <div class="divFormContato">
-        <h1>Entre em contato!</h1>
-        <form action="{% url 'addcontato' %}" method="post" class="formContato">
-            {% csrf_token %}
-            {{form}}
-            <input type="submit" value="Enviar mensagem">
-        </form>
-    </div>
+    <section class="section  h-screen mx-auto">
+        <div class="form-container">
+            <div class="form-title">
+                <h1>Entre em contato</h1>
+                <!-- <a href="{% url 'categoria' %}">< Voltar</a> -->
+            </div>
+            <form action="{% url 'addcontato' %}" method="post" class="form">
+                {% csrf_token %}
+                {{form.as_p }}
+                <input type="submit" value="Enviar mensagem" class="btn">
+            </form>
+        </div>
+    </section>
 {% endblock %}

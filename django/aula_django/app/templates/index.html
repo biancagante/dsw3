@@ -1,27 +1,71 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Home
-{% endblock %}
+{% block titulo %}Home{% endblock %}
 
 {% block conteudo %}
-    <section class="section hero">
-        <div class="hero-bg" style="background-image: url('https://cdn.alromaizan.com/image/upload/f_webp,q_100/media/images/niqsxka5taol983l3dgz.webp');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="text-5xl">Joias que contam sua história</h1>
-            <p class="hero-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            <a href="{% url 'criarconta' %}" class="btn">Crie sua conta</a>
+
+<!-- HERO -->
+<section class="hero-section">
+    <div class="hero-bg" style="background-image: url('https://cdn.alromaizan.com/image/upload/f_webp,q_100/media/images/niqsxka5taol983l3dgz.webp');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">Joias que contam sua história</h1>
+        <p class="hero-text">Peças exclusivas para momentos únicos.</p>
+        <a href="{% url 'criarconta' %}" class="btn-primary">Crie sua conta</a>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section-default">
+    <div class="container-default">
+        <h2 class="section-title">O que fazemos</h2>
+        <p class="section-text">
+            Criamos joias elegantes com design atemporal, pensadas para destacar sua personalidade e acompanhar momentos especiais.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="section-alt">
+    <div class="container-default">
+        <h2 class="section-title">Destaques</h2>
+
+        <div class="landing-grid">
+            <div class="landing-card">
+                <div class="landing-card-img"></div>
+                <h3 class="landing-card-title">Anéis</h3>
+            </div>
+
+            <div class="landing-card">
+                <div class="landing-card-img"></div>
+                <h3 class="landing-card-title">Colares</h3>
+            </div>
+
+            <div class="landing-card">
+                <div class="landing-card-img"></div>
+                <h3 class="landing-card-title">Brincos</h3>
+            </div>
         </div>
-    </section>
-    <section class="section p-12 gap-3">
-        <h2 class="text-3xl">O que fazemos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas impedit illum soluta, cumque laborum assumenda earum aspernatur quia itaque dolores animi optio necessitatibus culpa quos architecto reiciendis ullam praesentium.</p>
-    </section>
-    <section class="section">
-        prodtuinhos
-    </section>
-    <section class="section">
-        fale conosco
-    </section>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2 class="cta-title">Descubra sua próxima joia favorita</h2>
+        <p class="cta-text">Explore nossa coleção completa e encontre peças únicas.</p>
+        <a href="{% url 'produtos' %}" class="btn-secondary">Ver produtos</a>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section-default">
+    <div class="container-default">
+        <h2 class="section-title">Fale conosco</h2>
+        <p class="section-text">Entre em contato para dúvidas, pedidos personalizados ou suporte.</p>
+        <a href="{% url 'addcontato' %}" class="btn-primary">Entrar em contato</a>
+    </div>
+</section>
+
 {% endblock %}

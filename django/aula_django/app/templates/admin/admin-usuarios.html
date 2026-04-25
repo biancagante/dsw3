@@ -1,19 +1,37 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Usuários
-{% endblock %}
+{% block titulo %}Usuários{% endblock %}
 
 {% block conteudo %}
-    <!-- <a href="{% url 'addproduto' %}">Adicionar Produto</a> -->
-    <div style="display: flex;">
-        {% for user in usuarios %}
-            <div class="cardProduto">
-                <!-- <img src="media/{{ produto.imagem }}" alt="" width="180px"> -->
-                <p>{{ user.username }}</p>
-                <p>{{ user.email }}</p>
-                <!-- <p>{{ user.email }}</p> -->
-            </div>
-        {% endfor %}
+<section class="section mx-auto py-12 px-4">
+    <div class="w-7xl flex items-center justify-between mb-6 change-title">
+        <h1 class="text-2xl font-semibold text-zinc-800">Usuários</h1>
+        <a href="{% url 'dashboard' %}">< Voltar</a>
     </div>
+    <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-zinc-200">
+        <table class="w-7xl text-sm text-left text-zinc-700">
+            <thead class="bg-zinc-100 text-xs uppercase text-zinc-600">
+                <tr>
+                    <th class="px-6 py-3">ID</th>
+                    <th class="px-6 py-3">Usuário</th>
+                    <th class="px-6 py-3">Email</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-200">
+                {% for user in usuarios %}
+                    <tr class="hover:bg-zinc-50 transition">
+                        <td class="px-6 py-4 font-medium text-zinc-900">{{ user.id }}</td>
+                        <td class="px-6 py-4">{{ user.username }}</td>
+                        <td class="px-6 py-4">{{ user.email }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="px-6 py-6 text-center text-zinc-500">Nenhum usuário encontrado.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</section>
 {% endblock %}
