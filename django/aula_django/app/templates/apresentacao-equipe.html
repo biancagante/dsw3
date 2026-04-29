@@ -1,12 +1,27 @@
 {% extends 'template.html' %}
 
-{% block titulo %}
-    Quem somos
-{% endblock %}
+{% block titulo %}Quem somos{% endblock %}
 
 {% block conteudo %}
-    <section class="">
-        <h1>Povo aqui</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates odio nostrum dicta iste porro consequuntur veritatis ipsum tempore saepe commodi?</p>
-    </section>
+<section class="section-default">
+    <div class="container-default">
+        <div class="about-header">
+            <h1 class="section-title">Quem somos</h1>
+            <p class="section-text">
+                Somos uma marca focada em criar joias elegantes e atemporais, valorizando identidade, estilo e momentos especiais.
+            </p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-avatar">
+                    <img src="https://avatars.githubusercontent.com/u/170120469?v=4" alt="">
+                </div>
+                <div class="about-info">
+                    <h2 class="about-name">Bianca</h2>
+                    <p class="about-role">Desenvolvedora & Fundadora</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

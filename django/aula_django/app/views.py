@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from app.models import Categoria, Contato, Produto
 from app.forms import FormCategoria, FormContato, FormProduto, FormUsuario
 # from django.contrib.auth.forms import UserCreationForm
@@ -37,6 +38,9 @@ def editCategoria(request, id_cat):
     _categoria = Categoria.objects.get(id=id_cat)
     formulario = FormCategoria(request.POST or None, instance=_categoria)
 
+    # return render(request, 'modal-confirmacao.html', {'classe': 'categoria', "objeto": _categoria, "acao": 'editar'})
+    # modalConfirmacao(request, "categoria", id_cat, "editcategoria")
+
     if request.POST:
         if formulario.is_valid():
             formulario.save()
@@ -57,20 +61,20 @@ def listarContatos(request):
     _contatos = Contato.objects.all().values()
     return render(request, 'admin/admin-contatos.html', {'contatos': _contatos})
 
-def editContato(request, id_cont):
-    _contato = Contato.objects.get(id=id_cont)
-    formulario = FormContato(request.POST or None, instance=_contato)
-
-    if request.POST:
-        if formulario.is_valid():
-            formulario.save()
-            return redirect('listarcontatos')
-    return render(request, 'contato/edit-contato.html', {'form': formulario})
-
-# def delContato(request, id_cont):
+# def editContato(request, id_cont):
 #     _contato = Contato.objects.get(id=id_cont)
-#     _contato.delete()
-#     return redirect('listarcontatos')
+#     formulario = FormContato(request.POST or None, instance=_contato)
+
+#     if request.POST:
+#         if formulario.is_valid():
+#             formulario.save()
+#             return redirect('listarcontatos')
+#     return render(request, 'contato/edit-contato.html', {'form': formulario})
+
+def delContato(request, id_cont):
+    _contato = Contato.objects.get(id=id_cont)
+    _contato.delete()
+    return redirect('listarcontatos')
 
 def addProduto(request):
     if request.method == 'POST':
@@ -123,3 +127,23 @@ def criarConta(request):
 def listarUsuarios(request):
     _usuarios = User.objects.all()
     return render(request, 'admin/admin-usuarios.html', {'usuarios': _usuarios})
+
+
+def modalConfirmacao(request, classe, objeto, acao, id):
+    url_destino = reverse(f'{acao}{classe}', args=[id])
+
+    if acao == 'edit':
+        acao = 'Editar'
+
+    if acao == 'del':
+        acao = 'Deletar'
+
+    contexto = {
+        "id": id, 
+        "acao": acao, 
+        "classe": classe,
+        "objeto": objeto,
+        "url": url_destino
+    }
+
+    return render(request, 'modal-confirmacao.html', contexto)

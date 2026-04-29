@@ -7,8 +7,7 @@
     <div class="products-header change-title">
         <a href="{% url 'dashboard' %}">< Voltar</a>
         <h1 class="products-title">Produtos</h1>
-        <a href="{% url 'addproduto' %}" class="btn-primary text-zinc-50
-        ">+ Adicionar Produto</a>
+        <a href="{% url 'addproduto' %}" class="btn-primary bg-zinc-900 text-zinc-50">+ Adicionar Produto</a>
     </div>
     <div class="products-grid">
         {% for produto in produtos %}
@@ -26,7 +25,7 @@
                     <div class="product-actions justify-between">                        
                         <div class="flex gap-3">
                             <a href="{% url 'editproduto' produto.id %}" class="text-blue-600 hover:underline text-sm">Editar</a>
-                            <a href="{% url 'delproduto' produto.id %}" class="text-red-600 hover:underline text-sm">Deletar</a>
+                            <a href="{% url 'modal' classe='produto' objeto=produto.nome acao='del'  id=produto.id %}" class="text-red-600 hover:underline text-sm">Deletar</a>
                         </div>
                     </div>
                 </div>

@@ -3,69 +3,60 @@
 {% block titulo %}Home{% endblock %}
 
 {% block conteudo %}
-
-<!-- HERO -->
-<section class="hero-section">
-    <div class="hero-bg" style="background-image: url('https://cdn.alromaizan.com/image/upload/f_webp,q_100/media/images/niqsxka5taol983l3dgz.webp');"></div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-        <h1 class="hero-title">Joias que contam sua história</h1>
-        <p class="hero-text">Peças exclusivas para momentos únicos.</p>
-        <a href="{% url 'criarconta' %}" class="btn-primary">Crie sua conta</a>
-    </div>
-</section>
-
-<!-- SOBRE -->
-<section class="section-default">
-    <div class="container-default">
-        <h2 class="section-title">O que fazemos</h2>
-        <p class="section-text">
-            Criamos joias elegantes com design atemporal, pensadas para destacar sua personalidade e acompanhar momentos especiais.
-        </p>
-    </div>
-</section>
-
-<!-- PRODUTOS -->
-<section class="section-alt">
-    <div class="container-default">
-        <h2 class="section-title">Destaques</h2>
-
-        <div class="landing-grid">
-            <div class="landing-card">
-                <div class="landing-card-img"></div>
-                <h3 class="landing-card-title">Anéis</h3>
-            </div>
-
-            <div class="landing-card">
-                <div class="landing-card-img"></div>
-                <h3 class="landing-card-title">Colares</h3>
-            </div>
-
-            <div class="landing-card">
-                <div class="landing-card-img"></div>
-                <h3 class="landing-card-title">Brincos</h3>
+    <section class="hero-section">
+        <div class="hero-bg" style="background-image: url('https://cdn.alromaizan.com/image/upload/f_webp,q_100/media/images/niqsxka5taol983l3dgz.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Joias que contam sua história</h1>
+            <p class="hero-text">Peças exclusivas para momentos únicos.</p>
+            <a href="{% url 'criarconta' %}" class="btn-primary">Crie sua conta</a>
+        </div>
+    </section>
+    <section class="section-default">
+        <div class="container-default">
+            <h2 class="section-title">O que fazemos</h2>
+            <p class="section-text">
+                Criamos joias elegantes com design atemporal, pensadas para destacar sua personalidade e acompanhar momentos especiais.
+            </p>
+        </div>
+    </section>
+    <section class="section-alt">
+        <div class="container-default">
+            <h2 class="section-title">Destaques</h2>
+            <div class="landing-grid">
+                <div class="landing-card">
+                    <div class="landing-card-img">
+                        <img src="https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/15549gisu1/diamond/diamond-Brillant_AAA/stone2/diamond-Brillant_AAA/stone3/diamond-Brillant_AAA/alloycolour/yellow.jpg" alt="">
+                    </div>
+                    <h3 class="landing-card-title">Anéis</h3>
+                </div>
+                <div class="landing-card">
+                    <div class="landing-card-img">
+                        <img src="https://cdn-cihoc.nitrocdn.com/tQOUswwPgjvSgPFzWlqixtMGEPQSpVpD/assets/images/optimized/rev-bf3cd36/www.jackfriedman.co.za/wp-content/uploads/2020/06/Ear-rings-White-resizeResized-scaled.jpg" alt="">
+                    </div>
+                    <h3 class="landing-card-title">Colares</h3>
+                </div>
+                <div class="landing-card">
+                    <div class="landing-card-img">
+                        <img src="https://www.hsamuel.co.uk/productimages/processed/V-9782483_1_400.jpg?pristine=true" alt="">
+                    </div>
+                    <h3 class="landing-card-title">Brincos</h3>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <div class="cta-box">
-        <h2 class="cta-title">Descubra sua próxima joia favorita</h2>
-        <p class="cta-text">Explore nossa coleção completa e encontre peças únicas.</p>
-        <a href="{% url 'produtos' %}" class="btn-secondary">Ver produtos</a>
-    </div>
-</section>
-
-<!-- CONTATO -->
-<section class="section-default">
-    <div class="container-default">
-        <h2 class="section-title">Fale conosco</h2>
-        <p class="section-text">Entre em contato para dúvidas, pedidos personalizados ou suporte.</p>
-        <a href="{% url 'addcontato' %}" class="btn-primary">Entrar em contato</a>
-    </div>
-</section>
-
+    </section>
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2 class="cta-title">Descubra sua próxima joia favorita</h2>
+            <p class="cta-text">Explore nossa coleção completa e encontre peças únicas.</p>
+            <a href="{% url 'produtos' %}" class="btn-primary">Ver produtos</a>
+        </div>
+    </section>
+    <section class="section-default">
+        <div class="container-default">
+            <h2 class="section-title">Fale conosco</h2>
+            <p class="section-text">Entre em contato para dúvidas, pedidos personalizados ou suporte.</p>
+            <a href="{% url 'addcontato' %}" class="btn-secondary m-5">Entrar em contato</a>
+        </div>
+    </section>
 {% endblock %}

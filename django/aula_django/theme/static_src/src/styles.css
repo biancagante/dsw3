@@ -234,7 +234,6 @@
         @apply text-lg text-zinc-200 mb-6;
     }
 
-    /* BOTÕES */
     .btn-primary {
         @apply inline-block bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-zinc-200 transition;
     }
@@ -243,7 +242,6 @@
         @apply inline-block bg-zinc-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-zinc-700 transition;
     }
 
-    /* GRID PRODUTOS */
     .landing-grid {
         @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8;
     }
@@ -253,14 +251,17 @@
     }
 
     .landing-card-img {
-        @apply h-40 bg-zinc-200 rounded-lg mb-4;
+        @apply h-60 rounded-lg mb-4 overflow-hidden;
+    }
+
+    .landing-card-img img {
+        @apply w-full h-full object-cover;
     }
 
     .landing-card-title {
         @apply text-lg font-semibold text-zinc-800;
     }
 
-    /* CTA */
     .cta-section {
         @apply py-20 px-6 bg-zinc-900 text-white text-center;
     }
@@ -275,5 +276,33 @@
 
     .cta-text {
         @apply text-zinc-300 mb-6;
+    }
+
+    .about-header {
+        @apply mb-12 text-center;
+    }
+
+    .about-grid {
+        @apply flex justify-center;
+    }
+
+    .about-card {
+        @apply bg-white border border-zinc-200 rounded-2xl shadow-sm p-8 flex flex-col items-center text-center hover:shadow-lg transition;
+    }
+
+    .about-avatar {
+        @apply w-32 h-32 rounded-full bg-zinc-300 mb-4 overflow-hidden;
+    }
+
+    .about-info {
+        @apply flex flex-col gap-1;
+    }
+
+    .about-name {
+        @apply text-xl font-semibold text-zinc-800;
+    }
+
+    textarea {
+        @apply h-35;
     }
 }

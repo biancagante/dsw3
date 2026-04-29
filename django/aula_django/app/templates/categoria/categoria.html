@@ -26,8 +26,9 @@
                         <td class="px-6 py-4">{{ cat.nome }}</td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-2">
+                                <!-- <a href="{% url 'editcategoria' cat.id %}" class="text-blue-600 hover:underline text-sm">Editar</a> -->
                                 <a href="{% url 'editcategoria' cat.id %}" class="text-blue-600 hover:underline text-sm">Editar</a>
-                                <a href="{% url 'delcategoria' cat.id %}" class="text-red-600 hover:underline text-sm">Excluir</a>
+                                <a href="{% url 'modal' classe='categoria' objeto=cat.nome acao='del'  id=cat.id %}" class="text-red-600 hover:underline text-sm">Excluir</a>
                             </div>
                         </td>
                     </tr>

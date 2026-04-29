@@ -30,7 +30,7 @@
                         <td class="px-6 py-4">{{ msg.data_envio }}</td>
                         <td class="px-6 py-4 text-right">
                             <div class="flex justify-end gap-2">
-                                <a href="{% url 'editcontato' msg.id %}" class="text-blue-600 hover:underline text-sm">Editar</a>
+                                <a href="{% url 'modal' classe='contato' objeto=msg.nome acao='del'  id=msg.id %}" class="text-red-600 hover:underline text-sm">Deletar</a>
                             </div>
                         </td>
                     </tr>
