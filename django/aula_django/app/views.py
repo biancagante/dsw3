@@ -3,12 +3,16 @@ from django.urls import reverse
 from app.models import Categoria, Contato, Produto
 from app.forms import FormCategoria, FormContato, FormProduto, FormUsuario
 # from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
+# @login_required
+@staff_member_required
 def dashboard(request):
     return render(request, 'dashboard.html')
 
@@ -117,7 +121,10 @@ def criarConta(request):
     if request.method == 'POST':
         form = FormUsuario(request.POST)
         if form.is_valid():
-            form.save()
+            usuario = form.save()
+            grupo_cliente = Group.objects.get(name='Cliente')
+            usuario.groups.add(grupo_cliente)
+
             return redirect('index')
     else:
         form = FormUsuario()
@@ -127,6 +134,24 @@ def criarConta(request):
 def listarUsuarios(request):
     _usuarios = User.objects.all()
     return render(request, 'admin/admin-usuarios.html', {'usuarios': _usuarios})
+
+# def editUsuario(request, id_user):
+#     _usuarios = Usuario.objects.get(id=id_user)
+#     form = FormProduto(request.POST or None, request.FILES, instance=_produto)
+
+#     if request.POST:
+#         if form.is_valid():
+#             form.save()
+#             return redirect('adminproduto')
+#     else:
+#         form = FormProduto(instance=_produto)
+
+#     return render(request, 'produto/edit-produto.html', {'form': form})
+
+# def delProduto(request, id_prod):
+#     _produto = Produto.objects.get(id=id_prod)
+#     _produto.delete()
+#     return redirect('adminproduto')
 
 
 def modalConfirmacao(request, classe, objeto, acao, id):
